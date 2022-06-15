@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="icon" type="image/png" href="canvas-logo-1024x1020.png"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Eaglercraft is real Minecraft 1.5.2 that you can play in any regular web browser. That includes school chromebooks, it works on all chromebooks. You can join real Minecraft 1.5.2 servers with it through a custom proxy based on Bungeecord." />
+<meta name="keywords" content="minecraft, applet, chromebook, lax1dude, games, eaglercraft, eagler" />
+<meta name="author" content="LAX1DUDE" />
+<meta property="og:title" content="Eaglercraft" />
+<meta property="og:locale" content="en-US" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://media.discordapp.net/attachments/378764518081429506/932053915061587978/thumbnail2.png" />
+<meta property="og:description" content="Eaglercraft is real Minecraft 1.5.2 that you can play in any regular web browser. That includes school chromebooks, it works on all chromebooks. You can join real Minecraft 1.5.2 servers with it through a custom proxy based on Bungeecord." />
+<!-- Change this: <meta property="og:url" content="http://koneseaglerserver.ga/" /> -->
+<script type="text/javascript" src="classes.js"></script>
+<script type="text/javascript">
+if(document.location.href.startsWith("file:")) {
+alert("You're not supposed to 'open' this file in your browser. Please upload this folder to your HTTP(s) server and access it via the internet. This is not a bug, please read the documentation");
+}else {
+	alert("Update Changelog: \n ----- Eaglercraft 22w19a ----- \n - Added Secure Client (so no more hacks/cheating)");
+	alert("Minecraft keeps Crashing or giving you errors? Try holding shift and clicking on reload \n Note: Also if a box appears saying that you might loose data, keep holding shift and click reload.");
+window.addEventListener("load", function(){
+window.minecraftOpts = [
+"game_frame","assets.epk",
+"CgAACQAHc2VydmVycwoAAAAFCAACaXAAIHdzOi8va29uZXNlYWdsZXIuY2FtZHZyLm9yZzo0NDMvCAAEbmFtZQAQQmFpbGV5IE1DIFNlcnZlcgEAC2hpZGVBZGRyZXNzAQgACmZvcmNlZE1PVEQAGUhvcGVmdWxseSB0aGlzIGZpeCB3b3JrcyEACAACaXAAHXdzczovL21jLnByaW1pdHQuZGV2L3N1cnZpdmFsCAAEbmFtZQAJUHJpbUNyYWZ0AQALaGlkZUFkZHJlc3MBCAAKZm9yY2VkTU9URAAJUHJpbUNyYWZ0AAgAAmlwABp3c3M6Ly9hZW9uLW5ldHdvcmsudGsvYWVvbggABG5hbWUADEFlb24gTmV0d29yawEAC2hpZGVBZGRyZXNzAQgACmZvcmNlZE1PVEQADEFlb24gTmV0d29yawAIAAJpcAAfd3NzOi8vd2ViLmFzc3BpeGVsLm5ldC9DQVBpeGVsLwgABG5hbWUACEEqc1BpeGVsAQALaGlkZUFkZHJlc3MBCAAKZm9yY2VkTU9URAAIQSpzUGl4ZWwACAACaXAAGndzczovL2JhY2t1cC5hc3NwaXhlbC5uZXQvCAAEbmFtZQAPQSpzUGl4ZWwgQmFja3VwAQALaGlkZUFkZHJlc3MBCAAKZm9yY2VkTU9URAAPQSpzUGl4ZWwgQmFja3VwAAA="
+];
+(function(){
+var q = window.location.search;
+if(typeof q === 'string' && q.startsWith("?")) {
+	q = new URLSearchParams(q);
+	var s = q.get("server");
+	if(s) window.minecraftOpts.push(s);
+}
+})();
+main();
+});}
+</script>
+</head>
+<body style="margin:0px;width:100vw;height:100vh;" id="game_frame">
+</body>
+</html>
